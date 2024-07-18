@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Data Extraction - G TECH",
+  "version": "1.0",
+  "description": "This Plugin Extracts the Data about the products from the Chinese MarketPlace and saves that data in the form of CSV file and in the DATABASE. You can also Download the CSV file.",
+  "permissions": ["activeTab", "http://*/", "https://*/"],
+  "browser_action": {
+    "default_icon": "./icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://item.taobao.com/*", "https://detail.tmall.com/*"],
+      "js": ["app.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "./icon.png"
+  }
+}
